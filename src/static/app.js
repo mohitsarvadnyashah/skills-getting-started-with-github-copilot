@@ -7,8 +7,39 @@ document.addEventListener("DOMContentLoaded", () => {
     // Function to fetch activities from API
   async function fetchActivities() {
     try {
-      const response = await fetch("/activities");
-      const activities = await response.json();
+      // Mock data for demonstration
+      const activities = {
+        "Basketball Team": {
+          description: "Join the school's basketball team for competitive games and practice.",
+          schedule: "Mondays and Wednesdays, 4-6 PM",
+          max_participants: 20,
+          participants: ["alice@mergington.edu", "bob@mergington.edu", "charlie@mergington.edu"]
+        },
+        "Swimming Club": {
+          description: "Dive into fun with the swimming club at the local pool.",
+          schedule: "Tuesdays and Thursdays, 5-7 PM",
+          max_participants: 15,
+          participants: ["diana@mergington.edu", "eve@mergington.edu"]
+        },
+        "Drama Club": {
+          description: "Express yourself through acting and theater productions.",
+          schedule: "Fridays, 3-5 PM",
+          max_participants: 25,
+          participants: ["frank@mergington.edu", "grace@mergington.edu", "henry@mergington.edu", "ivy@mergington.edu"]
+        },
+        "Debate Team": {
+          description: "Sharpen your argumentation skills and compete in debates.",
+          schedule: "Wednesdays, 6-8 PM",
+          max_participants: 12,
+          participants: ["jack@mergington.edu", "kate@mergington.edu"]
+        },
+        "Science Club": {
+          description: "Explore science through experiments and projects.",
+          schedule: "Thursdays, 4-6 PM",
+          max_participants: 18,
+          participants: ["leo@mergington.edu", "mia@mergington.edu", "noah@mergington.edu"]
+        }
+      };
 
       // Clear loading message
       activitiesList.innerHTML = "";
